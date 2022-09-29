@@ -1,12 +1,13 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import {Button,Card} from 'react-bootstrap';
 
 
 
-function Cards({name, img,time,handleClick}) {
+
+const Cards = ({name,img,id,time,handleClick}) =>  {
+  
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card key={id} style={{ width: '18rem' }}>
       <Card.Img variant="top" src={img}/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
@@ -15,7 +16,7 @@ function Cards({name, img,time,handleClick}) {
           bulk of the card's content.
         </Card.Text>
         <Card.Text>Time required : {time}s</Card.Text>
-        <Button variant="primary" onClick={handleClick}>Add to list</Button>
+        <Button variant="primary" onClick={() => handleClick(time)}>Add to list</Button>
       </Card.Body>
     </Card>
   )
