@@ -44,7 +44,9 @@ function App() {
     const getBreakTime = parseInt( e.target.innerText)
     setBreakTime(getBreakTime)
     if(e.target){
-      e.target.classList.toggle('bg-change') 
+      e.target.classList.add('bg-change') 
+    }else if(!e.target){
+      e.target.classList.remove('bg-change')
     }
     
   }
