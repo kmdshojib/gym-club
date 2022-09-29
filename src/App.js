@@ -8,6 +8,7 @@ import Cards from './Components/cards/cards'
 import './App.css'
 import Profile from './Components/profile/profile';
 import Header from './Components/Header/header'
+import Question from './Components/accordion/accordion'
 
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
                                 name={data.name} 
                                 img={data.img}
                                 time={data.time}
+                                description={data.description}
                                 handleClick={handleClick}
               />)
             }
@@ -86,6 +88,7 @@ function App() {
         totalBreakTime={totalBreakTime}
       />
     </div>
+      <Question  />
     </div>
   );
 }

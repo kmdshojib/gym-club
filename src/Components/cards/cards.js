@@ -5,7 +5,7 @@ import './cards.styles.css'
 
 
 
-const Cards = ({name,img,id,time,handleClick}) =>  {
+const Cards = ({name,img,id,time,handleClick,description}) =>  {
   
   return (
     <Card key={id} className="card-item">
@@ -13,8 +13,7 @@ const Cards = ({name,img,id,time,handleClick}) =>  {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {description}
         </Card.Text>
         <Card.Text>Time required : {time}s</Card.Text>
         <Button variant="primary" onClick={(e) => handleClick(time,e)}>Add to list</Button>
