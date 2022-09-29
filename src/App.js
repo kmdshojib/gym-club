@@ -43,23 +43,20 @@ function App() {
   // console.log(ladedTime)
 
   const handleClickSeconds = (e) =>{
-    const getBreakTime = [...breakTime, e.target.innerText]
+    const getBreakTime = parseInt( e.target.innerText)
     setBreakTime(getBreakTime)
-   
-    e.target.classList.add('bg-change')
+    if(e.target){
+      e.target.classList.toggle('bg-change') 
+    }
+    
   }
-
-  // total brreak timer 
-  const totalBreakTime = breakTime.map((a) => parseInt(a)).reduce((a,b)=> a + b,0)
- 
- 
 
   // adding items to local stoage
 
   useEffect(() =>{
     localStorage.setItem("exersiseTime", JSON.stringify(totalTime))
-    localStorage.setItem("totalBreakTime", JSON.stringify(totalBreakTime));
-  },[totalTime,totalBreakTime])
+    localStorage.setItem("totalBreakTime", JSON.stringify(breakTime));
+  },[totalTime,breakTime])
   
 
 
@@ -85,7 +82,7 @@ function App() {
       <Profile 
         handleClickSeconds={handleClickSeconds}
         totalTime={totalTime}
-        totalBreakTime={totalBreakTime}
+         getBreakTime={breakTime}
       />
     </div>
       <Question  />

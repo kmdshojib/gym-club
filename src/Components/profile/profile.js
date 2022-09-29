@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import {Button} from 'react-bootstrap';
 
- const Profile = ({handleClickSeconds,totalTime,totalBreakTime}) => {
+ const Profile = ({handleClickSeconds,totalTime,getBreakTime}) => {
     const notify = () => toast("Congratulations! You have successfully completed your today's goal!");
   return (
     <div className='exercise-profile-details'>
@@ -53,7 +53,7 @@ import {Button} from 'react-bootstrap';
             </div>
             <div className="break-time d-flex mt-3">
                 <h6 className='fw-bold pe-5'>Break time</h6>
-                <div className='text-muted ps-2'>{totalBreakTime} Seconds</div>
+                <div className='text-muted ps-2'>{getBreakTime} Seconds</div>
             </div>
 
             <Button className='mt-4 ms-4' variant="primary" onClick={notify}>Activity Completed</Button>
