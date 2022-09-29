@@ -1,14 +1,15 @@
 import React from 'react'
 import {Button,Card} from 'react-bootstrap';
 
+import './cards.styles.css'
 
 
 
 const Cards = ({name,img,id,time,handleClick}) =>  {
   
   return (
-    <Card key={id} style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={img}/>
+    <Card key={id} className="card-item">
+      <Card.Img variant="top" src={img} className="image-item"/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>

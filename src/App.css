@@ -1,0 +1,6 @@
+/* cards style */
+.card-container{
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}

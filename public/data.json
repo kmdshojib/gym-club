@@ -10,5 +10,30 @@
         "name":"Treadmill",
         "img":"https://images.pexels.com/photos/4959807/pexels-photo-4959807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "time": 40
+    },
+    {
+        "id":3,
+        "name":"Rope",
+        "img":"https://images.pexels.com/photos/2468339/pexels-photo-2468339.jpeg?cs=srgb&dl=pexels-leon-ardho-2468339.jpg&fm=jpg",
+        "time": 40
+    },
+    {
+        "id":4,
+        "name":"Pull Up",
+        "img":"https://images.pexels.com/photos/8692269/pexels-photo-8692269.jpeg?cs=srgb&dl=pexels-yaroslav-shuraev-8692269.jpg&fm=jpg",
+        "time": 40
+    },
+    {
+        "id":5,
+        "name":"Push Up",
+        "img":"https://images.pexels.com/photos/12720234/pexels-photo-12720234.jpeg?cs=srgb&dl=pexels-domagoj-bregant-12720234.jpg&fm=jpg",
+        "time": 40
+    },
+    {
+        "id":6,
+        "name":"Squat ",
+        "img":"https://images.pexels.com/photos/4761339/pexels-photo-4761339.jpeg?cs=srgb&dl=pexels-cottonbro-4761339.jpg&fm=jpg",
+        "time": 40
     }
+
 ]

@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 // importing cards from components
-import Cards from '../src/Components/cards'
-
+import Cards from './Components/cards/cards'
+import './App.css'
 
 
 function App() {
@@ -30,8 +30,8 @@ function App() {
   const totalTime = exerciseTime.reduce((a,b)=> a+b, 0)
   
   return (
-    <div>
-        <div className=''>
+    <div className='container d-flex'>
+        <div className='card-container me-5'>
             {
               cards.map(data => 
                           <Cards 
