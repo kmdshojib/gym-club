@@ -17,7 +17,7 @@ const Cards = ({name,img,id,time,handleClick}) =>  {
           bulk of the card's content.
         </Card.Text>
         <Card.Text>Time required : {time}s</Card.Text>
-        <Button variant="primary" onClick={() => handleClick(time)}>Add to list</Button>
+        <Button variant="primary" onClick={(e) => handleClick(time,e)}>Add to list</Button>
       </Card.Body>
     </Card>
   )
