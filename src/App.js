@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import Cards from './Components/cards/cards'
 import './App.css'
 import Profile from './Components/profile/profile';
+import Header from './Components/Header/header'
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
   const [cards,setCards] = useState([])
   const [exerciseTime,setExerciseTime] = useState([])
   const [breakTime,setBreakTime] = useState([])
+  const [items,setItems] = useState([])
+
+  // fetching data from local mechine
 
   useEffect(() =>{
     fetch('./data.json')
@@ -21,6 +25,8 @@ function App() {
     .then(data => setCards(data))
     
   },[])
+
+  // handle click on add items
 
   const handleClick = (time,e) => {
     const getTime =[...exerciseTime,time]
@@ -32,19 +38,37 @@ function App() {
   // calcuating total time of exercise
   const totalTime = exerciseTime.reduce((a,b)=> a+b, 0)
   
+  // const ladedTime = localStorage.getItem('exersiseTime')
+  // console.log(ladedTime)
+
   const handleClickSeconds = (e) =>{
     const getBreakTime = [...breakTime, e.target.innerText]
     setBreakTime(getBreakTime)
    
-    e.target.classList.toggle('bg-change')
+    e.target.classList.add('bg-change')
   }
 
+  // total brreak timer 
   const totalBreakTime = breakTime.map((a) => parseInt(a)).reduce((a,b)=> a + b,0)
  
+ 
+
+  // adding items to local stoage
+
+  useEffect(() =>{
+    localStorage.setItem("exersiseTime", JSON.stringify(totalTime))
+    localStorage.setItem("totalBreakTime", JSON.stringify(totalBreakTime));
+  },[totalTime,totalBreakTime])
+  
+
 
   return (
-    <div className='d-flex w-70'>
+    <div>
+    <Header className = "mb-5 mt-5" />
+      <div className='d-flex w-70 mobile-res'>
+        
         <div className='card-container me-5'>
+        
             {
               cards.map(data => 
                           <Cards 
@@ -61,6 +85,7 @@ function App() {
         totalTime={totalTime}
         totalBreakTime={totalBreakTime}
       />
+    </div>
     </div>
   );
 }

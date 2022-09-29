@@ -1,9 +1,14 @@
 import React from 'react'
 import './profile.styles.css'
 
+// imporing tost
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 import {Button} from 'react-bootstrap';
 
  const Profile = ({handleClickSeconds,totalTime,totalBreakTime}) => {
+    const notify = () => toast("Congratulations! You have successfully completed your today's goal!");
   return (
     <div className='exercise-profile-details'>
         <div className="profile-wraper  d-flex flex-row">
@@ -51,7 +56,8 @@ import {Button} from 'react-bootstrap';
                 <div className='text-muted ps-2'>{totalBreakTime} Seconds</div>
             </div>
 
-            <Button className='mt-4 ms-4' variant="primary">Activity Completed</Button>
+            <Button className='mt-4 ms-4' variant="primary" onClick={notify}>Activity Completed</Button>
+            <ToastContainer />
        </div>
     </div>
   )
