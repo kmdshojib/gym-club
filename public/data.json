@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "name":"Dumble",
+        "img":"https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "time": 30
+    },
+    {
+        "id":2,
+        "name":"Treadmill",
+        "img":"https://images.pexels.com/photos/4959807/pexels-photo-4959807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "time": 40
+    }
+]
