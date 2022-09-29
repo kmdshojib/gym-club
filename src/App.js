@@ -39,8 +39,6 @@ function App() {
   // calcuating total time of exercise
   const totalTime = exerciseTime.reduce((a,b)=> a+b, 0)
   
-  // const ladedTime = localStorage.getItem('exersiseTime')
-  // console.log(ladedTime)
 
   const handleClickSeconds = (e) =>{
     const getBreakTime = parseInt( e.target.innerText)
